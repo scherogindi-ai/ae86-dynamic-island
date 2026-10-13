@@ -14,7 +14,7 @@ targets:
       - path: AE86App
     settings:
       base:
-      GENERATE_INFOPLIST_FILE: YES
+        GENERATE_INFOPLIST_FILE: YES
         PRODUCT_BUNDLE_IDENTIFIER: com.example.ae86.dynamicisland
         INFOPLIST_KEY_CFBundleDisplayName: "AE86 Panda"
         INFOPLIST_KEY_NSSupportsLiveActivities: YES

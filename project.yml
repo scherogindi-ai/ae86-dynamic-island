@@ -33,6 +33,7 @@ targets:
       - path: AE86App/Assets.xcassets
     settings:
       base:
+        GENERATE_INFOPLIST_FILE: YES
         PRODUCT_BUNDLE_IDENTIFIER: com.example.ae86.dynamicisland.widget
         INFOPLIST_KEY_CFBundleDisplayName: "AE86 Live Activity"
         INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier: com.apple.widgetkit-extension

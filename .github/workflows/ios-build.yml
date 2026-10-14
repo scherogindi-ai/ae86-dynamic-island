@@ -34,6 +34,12 @@ jobs:
             -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO \
             build
+      - name: Upload built app
+        uses: actions/upload-artifact@v4
+        with:
+          name: AE86-iOS-Simulator-App
+          path: build/Build/Products/Debug-iphonesimulator/AE86App.app
+          if-no-files-found: error
 
       - name: Upload build logs
         if: failure()

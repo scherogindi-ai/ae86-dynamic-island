@@ -34,6 +34,23 @@ jobs:
             -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO \
             build
+      - name: Build for iPhone
+        run: |
+          xcodebuild \
+            -project AE86DynamicIsland.xcodeproj \
+            -scheme AE86App \
+            -sdk iphoneos \
+            -configuration Debug \
+            -derivedDataPath build-device \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Upload iPhone build
+        uses: actions/upload-artifact@v4
+        with:
+          name: AE86-iPhone-Build
+          path: build-device/Build/Products/Debug-iphoneos/AE86App.app
+          if-no-files-found: error
       - name: Upload built app
         uses: actions/upload-artifact@v4
         with:

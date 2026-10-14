@@ -20,6 +20,11 @@ targets:
         INFOPLIST_KEY_NSSupportsLiveActivities: YES
         TARGETED_DEVICE_FAMILY: "1,2"
         CODE_SIGNING_ALLOWED: NO
+        
+    dependencies:
+      - target: AE86Widget
+        embed: true
+
   AE86Widget:
     type: app-extension
     platform: iOS
